@@ -80,8 +80,9 @@ The primary license for Uniswap V3 Core is the Business Source License 1.1 (`BUS
 cd test
 truffle test UndoTransfer.test.js
 ```
-- Run last command several times until we have enough blocks to verify. `advanced to block > 30000`
-- Run to test if `undo_transfer()` function works.
+- At the beginning, the test will fail because the block is not enough to verify.
+- Run the last command several times until we have enough blocks to verify. `advanced to block > 30000`
+- Run to test if `undo_transfer()` function works. The result will be passed now.
 ```
 truffle test UndoTransfer.test.js
 ```
