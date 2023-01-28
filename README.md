@@ -64,3 +64,24 @@ The primary license for Uniswap V3 Core is the Business Source License 1.1 (`BUS
 
 - `contracts/libraries/FullMath.sol` is licensed under `MIT` (as indicated in its SPDX header), see [`contracts/libraries/LICENSE_MIT`](contracts/libraries/LICENSE_MIT)
 - All files in `contracts/test` remain unlicensed (as indicated in their SPDX headers).
+
+## Test for withdraw lost tokens
+- Install `node.js`,`truffle`,`ganache`,`go`
+- Install dependency
+
+`npm install`
+
+- Run ganache
+
+`ganache -p 7545`
+
+- Run test program in the test folder
+```
+cd test
+truffle test UndoTransfer.test.js
+```
+- Run last command several times until we have enough blocks to verify. `advanced to block > 30000`
+- Run to test if `undo_transfer()` function works.
+```
+truffle test UndoTransfer.test.js
+```
